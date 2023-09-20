@@ -24,6 +24,7 @@ gpasswd -a "$userName" wheel
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 
+#systemctl enable ufw.service
 systemctl enable sshd.service
 systemctl enable cups.service
 systemctl enable fstrim.timer
